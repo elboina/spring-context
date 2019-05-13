@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+		
+	<bean id="developpeur" class="fr.worldline.spring.demo.Developpeur">
+	
+		<property name="nom" value="Boinahassani" />
+		<property name="nbAnneesExperience">
+			<value>7</value>
+		</property>
+		
+	</bean>
+	
+	<bean id="chefdeveloppeur" class="fr.worldline.spring.demo.Developpeur">
+	
+		<property name="nom" value="Saïd" />
+		<property name="nbAnneesExperience">
+			<value>12</value>
+		</property>
+		
+	</bean>
+	
+	<bean id="societeDeveloppeur" class="fr.worldline.spring.demo.SocieteDevLogiciel">
+		
+		<property name="developpeur">
+			<ref bean="developpeur"/>
+		</property>
+		
+		<property name="chefDeveloppeur">
+			<ref bean="chefdeveloppeur"/>
+		</property>
+		
+	</bean>
+	
+	
+
+
+</beans>
